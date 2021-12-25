@@ -1,0 +1,409 @@
+import json
+import awswrangler as wr
+import psycopg2
+
+def lambda_handler(event, context):
+    
+    Provinces = wr.s3.read_csv(path='s3://realtor-static-tables/1.Provinces.csv')
+    Cities = wr.s3.read_csv(path='s3://realtor-static-tables/2.Cities.csv')
+    Property_type = wr.s3.read_csv(path='s3://realtor-static-tables/3.Property_type.csv')
+    Building_type = wr.s3.read_csv(path='s3://realtor-static-tables/4.Building_type.csv')
+    Property_ownership_type = wr.s3.read_csv(path='s3://realtor-static-tables/5.Property_ownership_type.csv')
+    Estate_status = wr.s3.read_csv(path='s3://realtor-static-tables/6.Estate_status.csv')
+    Organization = wr.s3.read_csv(path='s3://realtor-static-tables/8.Organization.csv')
+    Position = wr.s3.read_csv(path='s3://realtor-static-tables/9.Position.csv')
+    Broker = wr.s3.read_csv(path='s3://realtor-static-tables/10.Broker.csv')
+    Job = wr.s3.read_csv(path='s3://realtor-static-tables/11.Job.csv')
+    Marital_status = wr.s3.read_csv(path='s3://realtor-static-tables/12.Marital_status.csv')
+    Buyer = wr.s3.read_csv(path='s3://realtor-static-tables/13.Buyer.csv')
+    Owner = wr.s3.read_csv(path='s3://realtor-static-tables/14.Owner.csv')
+    Relationship_result = wr.s3.read_csv(path='s3://realtor-static-tables/15.Relationship_result.csv')
+    
+    
+
+    
+    
+    con = psycopg2.connect(host = "database-1.csturqiz4ljk.us-east-2.rds.amazonaws.com",
+                        database = "postgres",
+                        user = "postgres",
+                        password = "postgres",
+                        port = 5432)
+                        
+    cur = con.cursor()
+    
+    
+    try:
+        cur.execute("""
+        CREATE TABLE Provinces
+        (
+        province_id INT PRIMARY KEY NOT NULL,
+        name VARCHAR(50) NOT NULL
+        )
+        """)
+        
+        con.commit()
+        
+        provinces_tup = [tuple(x) for x in Provinces.values]
+        
+        provinces_records = ','.join(['%s'] * len(provinces_tup))
+        insert_query = 'insert into provinces (province_id, name) values {}'.format(provinces_records)
+        cur.execute(insert_query, provinces_tup)
+        con.commit()
+        print("Everything is fine with 'Provinces'")
+    except:
+        print("'Provinces' is already created and inserted")
+        
+        
+        
+    try:
+        cur.execute("""
+        CREATE TABLE Cities
+        (
+        city_id INT PRIMARY KEY NOT NULL,
+        name VARCHAR(50) NOT NULL,
+        province_id INT NOT NULL,
+        area_km_2 FLOAT NOT NULL,
+        population BIGINT NOT NULL,
+        FOREIGN KEY (province_id) REFERENCES Provinces (province_id)
+        )
+        """)
+        
+        con.commit()
+        
+        cities_tup = [tuple(x) for x in Cities.values]
+        
+        cities_records = ','.join(['%s'] * len(cities_tup))
+        insert_query = 'insert into cities (city_id, name, province_id, area_km_2, population) values {}'.format(cities_records)
+        cur.execute(insert_query, cities_tup)
+        con.commit()
+        print("Everything is fine with 'Cities'")
+    except:
+        print("'Cities' is already created and inserted")
+        
+        
+    try:
+        cur.execute("""
+        CREATE TABLE Property_type
+        (
+        property_type_id INT PRIMARY KEY NOT NULL,
+        name VARCHAR(50) NOT NULL
+        )
+        """)
+        
+        con.commit()
+        
+        property_type_tup = [tuple(x) for x in Property_type.values]
+        
+        property_type_records = ','.join(['%s'] * len(property_type_tup))
+        insert_query = 'insert into property_type (property_type_id, name) values {}'.format(property_type_records)
+        cur.execute(insert_query, property_type_tup)
+        con.commit()
+        print("Everything is fine with 'Property_type'")
+    except:
+        print("'Property_type' is already created and inserted")
+        
+        
+    try:
+        cur.execute("""
+        CREATE TABLE Building_type
+        (
+        building_type_id INT PRIMARY KEY NOT NULL,
+        name VARCHAR(50) NOT NULL
+        )
+        """)
+        
+        con.commit()
+        
+        building_type_tup = [tuple(x) for x in Building_type.values]
+        
+        building_type_records = ','.join(['%s'] * len(building_type_tup))
+        insert_query = 'insert into building_type (building_type_id, name) values {}'.format(building_type_records)
+        cur.execute(insert_query, building_type_tup)
+        con.commit()
+        print("Everything is fine with 'Building_type'")
+    except:
+        print("'Building_type' is already created and inserted")
+        
+        
+        
+    try:
+        cur.execute("""
+        CREATE TABLE Property_ownership_type
+        (
+        property_ownership_type_id INT PRIMARY KEY NOT NULL,
+        name VARCHAR(50) NOT NULL
+        )
+        """)
+        
+        con.commit()
+        
+        property_ownership_type_tup = [tuple(x) for x in Property_ownership_type.values]
+        
+        property_ownership_type_records = ','.join(['%s'] * len(property_ownership_type_tup))
+        insert_query = 'insert into property_ownership_type (property_ownership_type_id, name) values {}'.format(property_ownership_type_records)
+        cur.execute(insert_query, property_ownership_type_tup)
+        con.commit()
+        print("Everything is fine with 'Property_ownership_type'")
+    except:
+        print("'Property_ownership_type' is already created and inserted")
+        
+        
+    try:
+        cur.execute("""
+        CREATE TABLE Estate_status
+        (
+        estate_status_id INT PRIMARY KEY NOT NULL,
+        name VARCHAR(50) NOT NULL
+        )
+        """)
+        
+        con.commit()
+        
+        estate_status_tup = [tuple(x) for x in Estate_status.values]
+        
+        estate_status_records = ','.join(['%s'] * len(estate_status_tup))
+        insert_query = 'insert into estate_status (estate_status_id, name) values {}'.format(estate_status_records)
+        cur.execute(insert_query, estate_status_tup)
+        con.commit()
+        print("Everything is fine with 'Estate_status'")
+    except:
+        print("'Estate_status' is already created and inserted")
+        
+        
+        
+        
+    try:
+        cur.execute("""
+        CREATE TABLE Organization
+        (
+        organization_id INT PRIMARY KEY NOT NULL,
+        organization_name VARCHAR(100) NOT NULL,
+        organization_address TEXT NOT NULL,
+        organization_phone_area_code VARCHAR(50) NOT NULL,
+        organization_phone_number VARCHAR(50) NOT NULL,
+        organization_fax_area_code VARCHAR(50) NOT NULL,
+        organization_fax_number VARCHAR(50) NOT NULL
+        )
+        """)
+        
+        con.commit()
+        
+        organization_tup = [tuple(x) for x in Organization.values]
+        
+        organization_records = ','.join(['%s'] * len(organization_tup))
+        insert_query = 'insert into organization (organization_id, organization_name,organization_address,organization_phone_area_code,organization_phone_number,organization_fax_area_code,organization_fax_number) values {}'.format(organization_records)
+        cur.execute(insert_query, organization_tup)
+        con.commit()
+        print("Everything is fine with 'Organization'")
+    except:
+        print("'Organization' is already created and inserted")
+        
+        
+        
+    try:
+        cur.execute("""
+        CREATE TABLE Position
+        (
+        position_id INT PRIMARY KEY NOT NULL,
+        name VARCHAR(50) NOT NULL
+        )
+        """)
+        
+        con.commit()
+        
+        position_tup = [tuple(x) for x in Position.values]
+        
+        position_records = ','.join(['%s'] * len(position_tup))
+        insert_query = 'insert into position (position_id, name) values {}'.format(position_records)
+        cur.execute(insert_query, position_tup)
+        con.commit()
+        print("Everything is fine with 'Position'")
+    except:
+        print("'Position' is already created and inserted")
+        
+        
+        
+        
+    try:
+        cur.execute("""
+        CREATE TABLE Broker
+        (
+        broker_id INT PRIMARY KEY NOT NULL,
+        first_name VARCHAR(50) NOT NULL,
+        last_name VARCHAR(50) NOT NULL,
+        organization_id INT NOT NULL,
+        position_id INT NOT NULL,
+        broker_area_code VARCHAR(50) NOT NULL,
+        broker_phone_number VARCHAR(50) NOT NULL,
+        FOREIGN KEY (organization_id) REFERENCES organization (organization_id),
+        FOREIGN KEY (position_id) REFERENCES position (position_id)
+        )
+        """)
+        
+        con.commit()
+        
+        broker_tup = [tuple(x) for x in Broker.values]
+        
+        broker_records = ','.join(['%s'] * len(broker_tup))
+        insert_query = 'insert into broker (broker_id, first_name,last_name,organization_id,position_id,broker_area_code,broker_phone_number) values {}'.format(broker_records)
+        cur.execute(insert_query, broker_tup)
+        con.commit()
+        print("Everything is fine with 'Broker'")
+    except:
+        print("'Broker' is already created and inserted")
+        
+        
+        
+    try:
+        cur.execute("""
+        CREATE TABLE Job
+        (
+        job_id INT PRIMARY KEY NOT NULL,
+        name TEXT NOT NULL,
+        wages_$_hour FLOAT NOT NULL
+        )
+        """)
+        
+        con.commit()
+        
+        job_tup = [tuple(x) for x in Job.values]
+        
+        job_records = ','.join(['%s'] * len(job_tup))
+        insert_query = 'insert into job (job_id, name,wages_$_hour) values {}'.format(job_records)
+        cur.execute(insert_query, job_tup)
+        con.commit()
+        print("Everything is fine with 'Job'")
+    except:
+        print("'Job' is already created and inserted")
+        
+        
+        
+    try:
+        cur.execute("""
+        CREATE TABLE Marital_status
+        (
+        marital_status_id INT PRIMARY KEY NOT NULL,
+        name VARCHAR(50) NOT NULL
+        )
+        """)
+        
+        con.commit()
+        
+        marital_status_tup = [tuple(x) for x in Marital_status.values]
+        
+        marital_status_records = ','.join(['%s'] * len(marital_status_tup))
+        insert_query = 'insert into marital_status (marital_status_id, name) values {}'.format(marital_status_records)
+        cur.execute(insert_query, marital_status_tup)
+        con.commit()
+        print("Everything is fine with 'Marital_status'")
+    except:
+        print("'Marital_status' is already created and inserted")
+        
+        
+        
+    try:
+        cur.execute("""
+        CREATE TABLE Buyer
+        (
+        buyer_id INT PRIMARY KEY NOT NULL,
+        first_name VARCHAR(50) NOT NULL,
+        last_name VARCHAR(50) NOT NULL,
+        age INT NOT NULL,
+        city_id INT NOT NULL,
+        marital_status_id INT NOT NULL,
+        job_id INT NOT NULL,
+        buyer_area_code VARCHAR(50) NOT NULL,
+        buyer_phone_number VARCHAR(50) NOT NULL,
+        FOREIGN KEY (city_id) REFERENCES cities (city_id),
+        FOREIGN KEY (marital_status_id) REFERENCES marital_status (marital_status_id),
+        FOREIGN KEY (job_id) REFERENCES job (job_id)
+        )
+        """)
+        
+        con.commit()
+        
+        buyer_tup = [tuple(x) for x in Buyer.values]
+        
+        buyer_records = ','.join(['%s'] * len(buyer_tup))
+        insert_query = 'insert into buyer (buyer_id,first_name,last_name,age,city_id,marital_status_id,job_id,buyer_area_code,buyer_phone_number) values {}'.format(buyer_records)
+        cur.execute(insert_query, buyer_tup)
+        con.commit()
+        print("Everything is fine with 'Buyer'")
+    except:
+        print("'Buyer' is already created and inserted")
+        
+        
+        
+    try:
+        cur.execute("""
+        CREATE TABLE Owner
+        (
+        owner_id INT PRIMARY KEY NOT NULL,
+        first_name VARCHAR(50) NOT NULL,
+        last_name VARCHAR(50) NOT NULL,
+        city_id INT NOT NULL,
+        owner_area_code VARCHAR(50) NOT NULL,
+        owner_phone_number VARCHAR(50) NOT NULL,
+        FOREIGN KEY (city_id) REFERENCES cities (city_id)
+        )
+        """)
+        
+        con.commit()
+        
+        owner_tup = [tuple(x) for x in Owner.values]
+        
+        owner_records = ','.join(['%s'] * len(owner_tup))
+        insert_query = 'insert into owner (owner_id,first_name,last_name,city_id,owner_area_code,owner_phone_number) values {}'.format(owner_records)
+        cur.execute(insert_query, owner_tup)
+        con.commit()
+        print("Everything is fine with 'Owner'")
+    except:
+        print("'Owner' is already created and inserted")
+        
+        
+        
+        
+    try:
+        cur.execute("""
+        CREATE TABLE Relationship_result
+        (
+        relationship_result_id INT PRIMARY KEY NOT NULL,
+        name VARCHAR(50) NOT NULL
+        )
+        """)
+        
+        con.commit()
+        
+        relationship_result_tup = [tuple(x) for x in Relationship_result.values]
+        
+        relationship_result_records = ','.join(['%s'] * len(relationship_result_tup))
+        insert_query = 'insert into relationship_result (relationship_result_id, name) values {}'.format(relationship_result_records)
+        cur.execute(insert_query, relationship_result_tup)
+        con.commit()
+        print("Everything is fine with 'Relationship_result'")
+    except:
+        print("'Relationship_result' is already created and inserted")
+        
+        
+   
+    
+
+    
+    wr.s3.to_parquet(df=Provinces,path="s3://parquet-static-files/Provinces.parquet")
+    wr.s3.to_parquet(df=Cities,path="s3://parquet-static-files/Cities.parquet")
+    wr.s3.to_parquet(df=Property_type,path="s3://parquet-static-files/Property_type.parquet")
+    wr.s3.to_parquet(df=Building_type,path="s3://parquet-static-files/Building_type.parquet")
+    wr.s3.to_parquet(df=Property_ownership_type,path="s3://parquet-static-files/Property_ownership_type.parquet")
+    wr.s3.to_parquet(df=Estate_status,path="s3://parquet-static-files/Estate_status.parquet")
+    wr.s3.to_parquet(df=Organization,path="s3://parquet-static-files/Organization.parquet")
+    wr.s3.to_parquet(df=Position,path="s3://parquet-static-files/Position.parquet")
+    wr.s3.to_parquet(df=Broker,path="s3://parquet-static-files/Broker.parquet")
+    wr.s3.to_parquet(df=Job,path="s3://parquet-static-files/Job.parquet")
+    wr.s3.to_parquet(df=Marital_status,path="s3://parquet-static-files/Marital_status.parquet")
+    wr.s3.to_parquet(df=Buyer,path="s3://parquet-static-files/Buyer.parquet")
+    wr.s3.to_parquet(df=Owner,path="s3://parquet-static-files/Owner.parquet")
+    wr.s3.to_parquet(df=Relationship_result,path="s3://parquet-static-files/Relationship_result.parquet")
+    
+
+
+
