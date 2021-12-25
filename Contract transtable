@@ -1,0 +1,46 @@
+import json
+import awswrangler as wr
+import pandas as pd
+
+def lambda_handler(event, context):
+    
+    Estates = wr.s3.read_csv(path='s3://realtor-transaction-tables-initial/7.Estate.csv')
+    Estate_Broker_Relationships = wr.s3.read_csv(path='s3://realtor-transaction-tables-changed-overtime/16.Estate_Broker_relationship.csv')
+    Contracts = wr.s3.read_csv(path='s3://realtor-transaction-tables-initial/17.Contract.csv')
+    Broker = wr.s3.read_csv(path='s3://realtor-static-tables/10.Broker.csv')
+    Buyer = wr.s3.read_csv(path='s3://realtor-static-tables/13.Buyer.csv')
+
+    
+    df = Estate_Broker_Relationships[Estate_Broker_Relationships['result_id'] == 1]
+    
+    loop = df['relationship_id']
+    
+    i = 0
+    for id in loop:
+        if i % 10 == 0:
+            Estate_Broker_Relationships['result_id'][id - 1] == 3
+            Estate_Broker_Relationships['end_date'][id - 1] == datetime.now()
+            brok = Broker['broker_id']
+            new_brok = brok[:id-1] + brok[id:]
+            dict = {'relationship_id': len(Estate_Broker_Relationships.index) + 1, 'estate_id': Estate_Broker_Relationships['estate_id'][id - 1], 'broker_id': new_brok.sample(n=1),'result_id':1,'start_date':datetime.now(),'end_date':None}
+            Estate_Broker_Relationships = Estate_Broker_Relationships.append(dict, ignore_index = True)
+        else:
+            Estate_Broker_Relationships['result_id'][id - 1] == 2
+            buyer = Buyer['buyer_id'].sample(n=1)
+            dict = {'contract_id':len(Estate_Broker_Relationships.index) + 1,'relationship_id':id,'buyer_id':buyer,'owner_id':Estate['owner_id'][id - 1],'date':datetime.now(),'price':Estate['price'][id - 1]*[range(90,101)].sample(n=1)//100}
+            Estate['owner_id'][id - 1] = buyer
+            Estate['status_id'][id - 1] = 2
+            
+        i =+10
+    
+    wr.s3.to_csv(df=Estate_Broker_Relationships,path='s3://realtor-transaction-tables-changed-overtime/16.Estate_Broker_relationship.csv')
+    wr.s3.to_csv(df=Contract,path='s3://realtor-transaction-tables-changed-overtime/17.Contract.csv')
+
+
+    
+    
+
+    
+
+
+
