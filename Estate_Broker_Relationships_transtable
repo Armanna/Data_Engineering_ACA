@@ -1,0 +1,51 @@
+import json
+import awswrangler as wr
+from datetime import datetime
+import pandas as pd
+
+
+def lambda_handler(event, context):
+    
+    Estates = wr.s3.read_csv(path='s3://realtor-transaction-tables-initial/7.Estate.csv')
+    Estate_Broker_Relationships = wr.s3.read_csv(path='s3://realtor-transaction-tables-changed-overtime/16.Estate_Broker_relationship.csv')
+    Broker = wr.s3.read_csv(path='s3://realtor-static-tables/10.Broker.csv')
+    
+    
+    df =  Estates[Estates['status_id'] == 1]
+    
+
+    if len(df['status_id']) == 0:
+        print('All estates are sold. Congratulations!')
+        return
+    
+    
+    
+    new_est = Estates[Estates['status_id'] == 1]
+    next_sample = new_est.sample(frac=0.1)
+    estate_id = next_sample['estate_id']
+    
+    rel_index = len(Estate_Broker_Relationships.index)
+    rel_index = list(range(rel_index,rel_index + len(estate_id)))
+    broker_id = Broker.sample(n = len(estate_id))['broker_id']
+    
+    start_date = []
+    for i in range(len(estate_id)):
+        start_date.append(datetime.now())
+    
+    
+    end_date = [None]*len(estate_id)
+    
+    result_id = [1]*len(estate_id)
+    
+    
+    table = pd.DataFrame(list(zip(rel_index, estate_id,broker_id,result_id,start_date,end_date)), columns = ['relationship_id','estate_id','broker_id','result_id','start_date','end_date'])
+    
+    Estate_Broker_Relationships = Estate_Broker_Relationships.append(table, ignore_index=True)
+    
+    print(Estate_Broker_Relationships)
+    
+    wr.s3.to_csv(df=Estate_Broker_Relationships,path='s3://realtor-transaction-tables-changed-overtime/16.Estate_Broker_relationship.csv')
+    
+    
+    
+    
