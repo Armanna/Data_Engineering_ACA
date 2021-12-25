@@ -1,0 +1,16 @@
+The 3 main problems that were discovered during the project working.
+
+1) I have transaction table "Estate_Broker_Relationship" and I have had data loss problem when the relationship between estate and broker was failed.
+   I replaced the current broker with the new one. In other words, I updated my broker_id, and lost the information about previous broker. This loss could cause analytical
+   analytical problems in the warehouse.
+   
+   So I solved the problem with the method of SCD (aka Slowly changeing dimensions)
+   
+2) I had problem with the layer size limit. I wanted to add 3 packages in a single lambda: pandas, psycopg2, pyarrow and boto3 but size limit didn't allow me to add.
+
+   I solved the problem with awswrangler layer which includes itself the 4 packages I mentioned above and not only.
+   Moreover awswrangler facilitates the work with data preprocessing while creating tables and inserting rows.
+   
+3) I have a big problem with data insertion. I have tables with more than 70000 rows. So it took more than 4 hours to insert the rows.
+
+   I solved the problem with bulk insert.
