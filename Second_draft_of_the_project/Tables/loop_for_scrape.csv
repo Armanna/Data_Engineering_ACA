@@ -1,0 +1,395 @@
+Name,Population,Area(km²),Province_id
+Airdrie,43271,84.57,Alberta
+Beaumont,13284,10.47,Alberta
+Brooks,13676,18.59,Alberta
+Calgary,1096833,825.56,Alberta
+Camrose,17286,42.62,Alberta
+Chestermere,14824,32.94,Alberta
+Cold Lake,13839,59.92,Alberta
+Edmonton,812201,685.25,Alberta
+Fort Saskatchewan,19051,48.18,Alberta
+Grande Prairie,55655,132.73,Alberta
+Lacombe,11707,20.81,Alberta
+Leduc,24304,42.44,Alberta
+Lethbridge,83517,122.09,Alberta
+Lloydminster ,"18,032",24.04,Alberta
+Medicine Hat,60005,112.04,Alberta
+Red Deer,90564,104.73,Alberta
+Spruce Grove,26171,32.2,Alberta
+St. Albert,61466,48.45,Alberta
+Wetaskiwin,12525,18.31,Alberta
+Abbotsford,141397,375.55,British Columbia
+Armstrong,5114,5.22,British Columbia
+Burnaby,232755,90.61,British Columbia
+Campbell River,32588,144.36,British Columbia
+Castlegar,8039,19.67,British Columbia
+Chilliwack,83788,261.65,British Columbia
+Colwood,16859,17.67,British Columbia
+Coquitlam,139284,122.30,British Columbia
+Courtenay,25599,29.38,British Columbia
+Cranbrook,20047,32.00,British Columbia
+Dawson Creek,12178,24.37,British Columbia
+Delta,102238,180.20,British Columbia
+Duncan,4944,2.07,British Columbia
+Enderby,2964,4.26,British Columbia
+Fernie,5249,13.50,British Columbia
+Fort St. John,20155,26.27,British Columbia
+Grand Forks,4049,10.43,British Columbia
+Greenwood,665,2.42,British Columbia
+Kamloops,90280,299.25,British Columbia
+Kelowna,127380,211.85,British Columbia
+Kimberley,7425,60.62,British Columbia
+Langford,35342,39.94,British Columbia
+Langley,25888,10.22,British Columbia
+Maple Ridge,82256,266.78,British Columbia
+Merritt,7139,26.07,British Columbia
+Mission,38833,227.65,British Columbia
+Nanaimo,90504,90.76,British Columbia
+Nelson,10572,11.95,British Columbia
+New Westminster,70996,15.63,British Columbia
+North Vancouver,52898,11.85,British Columbia
+Parksville,12514,14.56,British Columbia
+Penticton,33761,42.10,British Columbia
+Pitt Meadows,18573,86.51,British Columbia
+Port Alberni,17678,19.76,British Columbia
+Port Coquitlam,58612,29.17,British Columbia
+Port Moody,33551,25.89,British Columbia
+Powell River,13157,28.91,British Columbia
+Prince George,74003,318.26,British Columbia
+Prince Rupert,12220,66.28,British Columbia
+Quesnel,9879,35.39,British Columbia
+Revelstoke,7547,41.13,British Columbia
+Richmond,198309,129.27,British Columbia
+Rossland,3729,59.79,British Columbia
+Salmon Arm,17706,155.28,British Columbia
+Surrey,517887,316.41,British Columbia
+Terrace,11643,57.36,British Columbia
+Trail,7709,34.93,British Columbia
+Vancouver[a],631486,114.97,British Columbia
+Vernon,40116,96.05,British Columbia
+Victoria[b],85792,19.47,British Columbia
+West Kelowna,32655,123.53,British Columbia
+White Rock,19952,5.12,British Columbia
+Williams Lake,10753,33.13,British Columbia
+Brandon,48859,77.41,Manitoba
+Dauphin,"8,369",12.61,Manitoba
+Flin Flon ,"4,991",13.87,Manitoba
+Morden,8668,16.37,Manitoba
+Portage la Prairie,13304,24.68,Manitoba
+Selkirk,10278,24.86,Manitoba
+Steinbach,15829,25.59,Manitoba
+Thompson,13678,20.79,Manitoba
+Winkler,"12,660",17.00,Manitoba
+Winnipeg,705244,464.33,Manitoba
+Bathurst,11897,92.04,New Brunswick
+Campbellton,6883,18.58,New Brunswick
+Dieppe,25384,54.05,New Brunswick
+Edmundston,16580,106.85,New Brunswick
+Fredericton,58220,132.57,New Brunswick
+Miramichi,17537,179.93,New Brunswick
+Moncton,71889,141.92,New Brunswick
+Saint John,67575,315.96,New Brunswick
+Corner Brook,19806,148.26,Newfoundland and Labrador
+Mount Pearl,22957,15.76,Newfoundland and Labrador
+St. John's,108860,445.88,Newfoundland and Labrador
+Yellowknife,19569,105.47,Northwest Territories
+Halifax,431479,5.49,Nova Scotia
+Sydney,29904,29.43,Nova Scotia
+Darthmouth,101343,58.57,Nova Scotia
+Iqaluit,7740,52.5,Nunavut
+Barrie,141434,99.04,Ontario
+Belleville,50716,247.25,Ontario
+Brampton,593638,266.36,Ontario
+Brant,36707,843.25,Ontario
+Brantford,97496,72.44,Ontario
+Brockville,21346,20.85,Ontario
+Burlington,183314,185.66,Ontario
+Cambridge,129920,113.01,Ontario
+Clarence-Rockland,24512,297.71,Ontario
+Cornwall,46589,61.56,Ontario
+Dryden,7749,66.19,Ontario
+Elliot Lake,10741,714.65,Ontario
+Greater Sudbury,161531,3228.35,Ontario
+Guelph,131794,87.22,Ontario
+Haldimand County,45608,1251.54,Ontario
+Hamilton,536917,1117.29,Ontario
+Kawartha Lakes,75423,3084.38,Ontario
+Kenora,15096,211.59,Ontario
+Kingston,123798,451.19,Ontario
+Kitchener,233222,136.77,Ontario
+London,383822,420.35,Ontario
+Markham,328966,212.35,Ontario
+Mississauga,721599,292.43,Ontario
+Niagara Falls,88071,209.73,Ontario
+Norfolk County,64044,1607.55,Ontario
+North Bay,51553,319.11,Ontario
+Orillia,31166,28.58,Ontario
+Oshawa,159458,145.64,Ontario
+Ottawa,934243,2790.30,Ontario
+Owen Sound,21341,24.27,Ontario
+Pembroke,13882,14.56,Ontario
+Peterborough,81032,64.25,Ontario
+Pickering,91771,231.55,Ontario
+Port Colborne,18306,121.96,Ontario
+Prince Edward County,24735,1050.49,Ontario
+Quinte West,43577,494.02,Ontario
+Richmond Hill,195022,101.11,Ontario
+Sarnia,71594,164.85,Ontario
+Sault Ste. Marie,73368,223.24,Ontario
+St. Catharines,133113,96.13,Ontario
+St. Thomas,38909,35.63,Ontario
+Stratford,31465,28.28,Ontario
+Temiskaming Shores,9920,178.11,Ontario
+Thorold,18801,82.99,Ontario
+Thunder Bay,107909,328.36,Ontario
+Timmins,41788,2978.83,Ontario
+Toronto,2731571,630.20,Ontario
+Vaughan,306233,273.56,Ontario
+Waterloo,104986,64.02,Ontario
+Welland,52293,81.04,Ontario
+Windsor,217188,146.38,Ontario
+Woodstock,40902,48.97,Ontario
+Charlottetown,36094,44.34,Prince Edward Island
+Summerside,14829,28.49,Prince Edward Island
+Acton Vale,7656,91.10,Quebec
+Alma,30776,196.54,Quebec
+Amos,12823,430.29,Quebec
+Amqui,6178,121.17,Quebec
+Baie-Comeau,21536,336.59,Quebec
+Baie-D'Urfé,3823,6.03,Quebec
+Baie-Saint-Paul,7146,546.48,Quebec
+Barkmere,58,17.99,Quebec
+Beaconsfield,19324,11.03,Quebec
+Beauceville,6281,164.55,Quebec
+Beauharnois,12884,69.31,Quebec
+Beaupré,3752,22.96,Quebec
+Bécancour,13031,440.68,Quebec
+Bedford,2560,4.25,Quebec
+Belleterre,313,551.02,Quebec
+Beloeil,22458,24.40,Quebec
+Berthierville,4189,6.89,Quebec
+Blainville,56863,55.16,Quebec
+Boisbriand,26884,27.82,Quebec
+Bois-des-Filion,9636,4.39,Quebec
+Bonaventure,2706,104.35,Quebec
+Boucherville,41671,70.50,Quebec
+Lac-Brome,5495,207.29,Quebec
+Bromont,9041,114.13,Quebec
+Brossard,85721,45.23,Quebec
+Brownsburg-Chatham,7122,247.40,Quebec
+Candiac,21047,17.31,Quebec
+Cap-Chat,2476,182.05,Quebec
+Cap-Santé,3400,54.53,Quebec
+Carignan,9462,62.27,Quebec
+Carleton-sur-Mer,4073,221.42,Quebec
+Causapscal,2304,161.60,Quebec
+Chambly,29120,25.13,Quebec
+Chandler,7546,419.34,Quebec
+Chapais,1499,63.71,Quebec
+Charlemagne,5913,2.19,Quebec
+Châteauguay,47906,35.95,Quebec
+Château-Richer,4126,229.55,Quebec
+Chibougamau,7504,698.13,Quebec
+Clermont,3085,51.59,Quebec
+Coaticook,8698,219.51,Quebec
+Contrecoeur,7887,61.51,Quebec
+Cookshire-Eaton,5393,296.38,Quebec
+Côte Saint-Luc,32448,6.96,Quebec
+Coteau-du-Lac,7044,46.89,Quebec
+Cowansville,13656,46.89,Quebec
+Danville,3826,151.98,Quebec
+Daveluyville,965,2.23,Quebec
+Dégelis,2863,557.05,Quebec
+Delson,7457,7.63,Quebec
+Desbiens,1028,10.40,Quebec
+Deux-Montagnes,17496,6.09,Quebec
+Disraeli,2336,6.79,Quebec
+Dolbeau-Mistassini,14250,295.49,Quebec
+Dollard-des-Ormeaux,48899,14.97,Quebec
+Donnacona,7200,20.13,Quebec
+Dorval,18980,20.91,Quebec
+Drummondville,75423,247.15,Quebec
+Dunham,3432,194.06,Quebec
+Duparquet,666,123.57,Quebec
+East Angus,3659,7.89,Quebec
+Estérel,196,12.57,Quebec
+Farnham,8909,92.26,Quebec
+Fermont,2474,476.89,Quebec
+Forestville,3081,195.05,Quebec
+Fossambault-sur-le-Lac,1960,11.53,Quebec
+Gaspé,14568,1121.43,Quebec
+Gatineau,276245,342.80,Quebec
+Gracefield,2462,386.84,Quebec
+Granby,66222,152.79,Quebec
+Grande-Rivière,3408,87.86,Quebec
+Hampstead,6973,1.80,Quebec
+Hudson,5185,21.87,Quebec
+Huntingdon,2444,2.78,Quebec
+Joliette,20484,22.97,Quebec
+Kingsey Falls,1947,69.64,Quebec
+Kirkland,20151,9.63,Quebec
+La Malbaie,8271,459.24,Quebec
+La Pocatière,4120,21.63,Quebec
+La Prairie,24110,43.68,Quebec
+La Sarre,7282,148.50,Quebec
+La Tuque,11001,25112.41,Quebec
+Lac-Delage,638,1.59,Quebec
+Lachute,12862,109.96,Quebec
+Lac-Mégantic,5654,21.95,Quebec
+Lac-Saint-Joseph,260,33.69,Quebec
+Lac-Sergent,497,3.76,Quebec
+L'Ancienne-Lorette,16543,7.72,Quebec
+L'Assomption,22429,98.99,Quebec
+Laval,422993,247.23,Quebec
+Lavaltrie,13657,68.39,Quebec
+Lebel-sur-Quévillon,2187,40.89,Quebec
+L'Épiphanie,5493,2.30,Quebec
+Léry,2318,10.53,Quebec
+Lévis,143414,449.05,Quebec
+L'Île-Cadieux,126,0.59,Quebec
+L'Île-Dorval,5,0.19,Quebec
+L'Île-Perrot,10756,5.55,Quebec
+Longueuil,239700,115.75,Quebec
+Lorraine,9352,5.92,Quebec
+Louiseville,7152,63.85,Quebec
+Macamic,2751,202.70,Quebec
+Magog,26669,144.47,Quebec
+Malartic,3377,148.85,Quebec
+Maniwaki,3853,5.98,Quebec
+Marieville,10725,63.23,Quebec
+Mascouche,46692,107.00,Quebec
+Matagami,1453,75.03,Quebec
+Matane,14311,196.08,Quebec
+Mercier,13115,46.08,Quebec
+Métabetchouan–Lac-à-la-Croix,3985,187.23,Quebec
+Métis-sur-Mer,587,48.60,Quebec
+Mirabel,50513,485.07,Quebec
+Mont-Joli,6281,24.20,Quebec
+Mont-Laurier,14116,591.27,Quebec
+Montmagny,11255,124.51,Quebec
+Montreal,1704694,365.65,Quebec
+Montreal West,5050,1.37,Quebec
+Montréal-Est,3850,12.24,Quebec
+Mont-Saint-Hilaire,18585,44.19,Quebec
+Mont-Tremblant,9646,235.06,Quebec
+Mount Royal,20276,7.53,Quebec
+Murdochville,651,61.37,Quebec
+Neuville,4392,71.99,Quebec
+New Richmond,3706,171.34,Quebec
+Nicolet,8169,95.93,Quebec
+Normandin,3033,212.46,Quebec
+Notre-Dame-de-l'Île-Perrot,10654,28.21,Quebec
+Notre-Dame-des-Prairies,9273,18.20,Quebec
+Otterburn Park,8421,5.37,Quebec
+Paspébiac,3164,94.47,Quebec
+Percé,3103,431.37,Quebec
+Pincourt,14558,7.11,Quebec
+Plessisville,6551,4.40,Quebec
+Pohénégamook,2582,340.44,Quebec
+Pointe-Claire,31380,18.90,Quebec
+Pont-Rouge,9240,121.20,Quebec
+Port-Cartier,6799,1102.09,Quebec
+Portneuf,3187,109.39,Quebec
+Prévost,13002,34.58,Quebec
+Princeville,6001,195.26,Quebec
+Québec,531902,453.38,Quebec
+Repentigny,84285,61.23,Quebec
+Richelieu,5236,30.98,Quebec
+Richmond,3232,6.92,Quebec
+Rigaud,7777,99.23,Quebec
+Rimouski,48664,339.64,Quebec
+Rivière-du-Loup,19507,84.11,Quebec
+Rivière-Rouge,4322,455.65,Quebec
+Roberval,10046,151.85,Quebec
+Rosemère,13958,10.84,Quebec
+Rouyn-Noranda,42334,6009.89,Quebec
+Saguenay,145949,1128.56,Quebec
+Saint-Augustin-de-Desmaures,18820,85.87,Quebec
+Saint-Basile,2631,98.84,Quebec
+Saint-Basile-le-Grand,17059,35.89,Quebec
+Saint-Bruno-de-Montarville,26394,43.14,Quebec
+Saint-Césaire,5877,83.20,Quebec
+Saint-Charles-Borromée,13791,18.52,Quebec
+Saint-Colomban,16019,93.87,Quebec
+Saint-Constant,27359,57.13,Quebec
+Sainte-Adèle,12919,120.95,Quebec
+Sainte-Agathe-des-Monts,10223,130.09,Quebec
+Sainte-Anne-de-Beaupré,2880,62.35,Quebec
+Sainte-Anne-de-Bellevue,4958,10.48,Quebec
+Sainte-Anne-des-Monts,6437,264.09,Quebec
+Sainte-Anne-des-Plaines,14421,93.59,Quebec
+Sainte-Catherine,17047,9.42,Quebec
+Sainte-Catherine-de-la-Jacques-Cartier,7706,121.06,Quebec
+Sainte-Julie,29881,48.53,Quebec
+Sainte-Marguerite-du-Lac-Masson,2763,91.96,Quebec
+Sainte-Marie,13565,107.57,Quebec
+Sainte-Marthe-sur-le-Lac,18074,8.75,Quebec
+Sainte-Thérèse,25989,9.48,Quebec
+Saint-Eustache,44008,70.51,Quebec
+Saint-Félicien,10238,363.19,Quebec
+Saint-Gabriel,2640,2.83,Quebec
+Saint-Georges,32513,199.27,Quebec
+Saint-Hyacinthe,55648,188.97,Quebec
+Saint-Jean-sur-Richelieu,95114,226.63,Quebec
+Saint-Jérôme,74346,90.44,Quebec
+Saint-Joseph-de-Beauce,4858,114.87,Quebec
+Saint-Joseph-de-Sorel,1642,1.38,Quebec
+Saint-Lambert,21861,7.59,Quebec
+Saint-Lazare,19889,66.80,Quebec
+Saint-Lin–Laurentides,20786,118.36,Quebec
+Saint-Marc-des-Carrières,2911,17.27,Quebec
+Saint-Ours,1669,59.31,Quebec
+Saint-Pamphile,2400,137.77,Quebec
+Saint-Pascal,3468,59.69,Quebec
+Saint-Pie,5607,107.49,Quebec
+Saint-Raymond,10221,670.33,Quebec
+Saint-Rémi,8061,78.35,Quebec
+Saint-Sauveur,10231,47.91,Quebec
+Saint-Tite,3673,91.33,Quebec
+Salaberry-de-Valleyfield,40745,107.13,Quebec
+Schefferville,155,27.33,Quebec
+Scotstown,472,11.46,Quebec
+Senneterre,2868,14889.93,Quebec
+Sept-Îles,25400,1762.92,Quebec
+Shawinigan,49349,734.84,Quebec
+Sherbrooke,161323,353.76,Quebec
+Sorel-Tracy,34755,57.46,Quebec
+Stanstead,2788,22.00,Quebec
+Sutton,4012,245.95,Quebec
+Témiscaming,2431,718.49,Quebec
+Témiscouata-sur-le-Lac,4910,218.80,Quebec
+Terrebonne,111575,154.12,Quebec
+Thetford Mines,25403,226.32,Quebec
+Thurso,2818,6.28,Quebec
+Trois-Pistoles,3246,7.64,Quebec
+Trois-Rivières,134413,289.32,Quebec
+Valcourt,2165,5.42,Quebec
+Val-d'Or,32491,3550.70,Quebec
+Val-des-Sources,6786,30.41,Quebec
+Varennes,21257,94.41,Quebec
+Vaudreuil-Dorion,38117,72.73,Quebec
+Victoriaville,46130,84.23,Quebec
+Ville-Marie,2584,5.84,Quebec
+Warwick,4635,109.84,Quebec
+Waterloo,4410,12.24,Quebec
+Waterville,2121,44.10,Quebec
+Westmount,20312,4.04,Quebec
+Windsor,5419,14.56,Quebec
+Estevan,11483,18.85,Saskatchewan
+Flin Flon ,203,2.37,Saskatchewan
+Humboldt,5869,13.46,Saskatchewan
+Lloydminster ,11765,17.34,Saskatchewan
+Martensville,9645,6.23,Saskatchewan
+Meadow Lake,5344,7.95,Saskatchewan
+Melfort,5992,14.78,Saskatchewan
+Melville,4562,14.82,Saskatchewan
+Moose Jaw,33890,50.68,Saskatchewan
+North Battleford,14315,33.55,Saskatchewan
+Prince Albert,35926,65.74,Saskatchewan
+Regina,215106,145.45,Saskatchewan
+Saskatoon,246376,209.56,Saskatchewan
+Swift Current,16604,24.04,Saskatchewan
+Warman,11020,8.54,Saskatchewan
+Weyburn,10870,18.49,Saskatchewan
+Yorkton,16343,25.77,Saskatchewan
+Whitehorse,25085,416.54,Yukon
